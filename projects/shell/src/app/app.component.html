@@ -3,12 +3,8 @@
     <button mat-icon-button>
       <mat-icon (click)="sidenav.toggle()">menu</mat-icon>
     </button>
-    <h1>ng-fakecoin</h1>
     <span class="menu-spacer"></span>
-    <div>
-      <a mat-button [routerLink]="'/'"> Home </a>
-      <a mat-button [routerLink]="'/cryptos/cryptos-search'"> Cryptos </a>
-    </div>
+    <h1>ng-fakecoin</h1>
   </mat-toolbar-row>
 </mat-toolbar>
 
@@ -17,9 +13,9 @@
   <mat-sidenav #sidenav>
     <mat-nav-list>
 
-      <a mat-list-item [routerLink]="'/'"> Home </a>
-      <a mat-list-item [routerLink]="'/cryptos/cryptos-search'"> Cryptos </a>
-      <a mat-list-item (click)="sidenav.toggle()" href="" mat-list-item>Close</a>
+      <a mat-list-item (click)="sidenav.toggle()" [routerLink]="'/'"> Home </a>
+      <a mat-list-item (click)="sidenav.toggle()" [routerLink]="'/cryptos/cryptos-search'"> Cryptos </a>
+      <a mat-list-item (click)="sidenav.toggle()" mat-list-item>Close </a>
 
     </mat-nav-list>
   </mat-sidenav>

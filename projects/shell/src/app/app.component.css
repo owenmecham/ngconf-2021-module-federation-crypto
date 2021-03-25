@@ -5,3 +5,11 @@
 .content-spacer {
   padding: 25px !important;
 }
+
+.menu-spacer {
+  padding-left: 25px;
+}
+
+mat-sidenav {
+  min-width: 175px !important;
+}

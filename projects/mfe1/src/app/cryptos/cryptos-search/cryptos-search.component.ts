@@ -1,35 +1,16 @@
-import {
-  Component,
-  ComponentFactoryResolver,
-  Inject,
-  Injector,
-  ViewChild,
-  ViewContainerRef,
-} from '@angular/core';
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-cryptos-search',
   templateUrl: './cryptos-search.component.html',
 })
 export class CryptosSearchComponent {
-  @ViewChild('vc', { read: ViewContainerRef, static: true })
-  viewContainer: ViewContainerRef;
-
-  constructor(
-    @Inject(Injector) private injector,
-    @Inject(ComponentFactoryResolver) private cfr
-  ) {}
-
+  active = false;
   search(): void {
-    alert('Not implemented for this demo!');
+    this.active = true;
   }
 
-  terms(): void {
-    import('../lazy/lazy.component')
-      .then((m) => m.LazyComponent)
-      .then((comp) => {
-        const factory = this.cfr.resolveComponentFactory(comp);
-        this.viewContainer.createComponent(factory, null, this.injector);
-      });
+  reset(): void {
+    this.active = false;
   }
 }

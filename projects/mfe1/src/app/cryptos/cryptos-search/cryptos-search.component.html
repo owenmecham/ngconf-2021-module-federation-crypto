@@ -1,55 +1,41 @@
 <style>
-    input[type=text] {
-        width: 100%;
-        max-width: 400px;
-        box-sizing: border-box;
-        border: none;
-        border-bottom: 2px solid silver;
-        font-size: 20px;
-        margin-bottom: 20px;
-        margin-top: 20px;
-    }
+  .example-card {
+  max-width: 400px;
+}
 
-    button {
-        border: 2px solid silver;
-        background-color: white;
-        font-size: 16px;
-        padding: 10px;
-        padding-left: 40px;
-        padding-right: 40px;
-        border-radius: 10px;
-        margin-bottom: 20px;
-        margin-top: 20px;
-        cursor: pointer;
-    }
-
-    button:active {
-        border-color: black;
-    }
-
-    #container {
-        border: 2px darkred dashed;
-        padding: 20px;
-    }
+.example-header-image {
+  background-image: url('https://material.angular.io/assets/img/examples/shiba1.jpg');
+  background-size: cover;
+}
 </style>
 
-<div id="container">
+<p>
+  <mat-form-field appearance="outline">
+    <mat-label>Search For Coins</mat-label>
+    <input matInput placeholder="Placeholder">
+    <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+    <mat-hint>You'll probably lose money</mat-hint>
+  </mat-form-field>
+</p>
+<p>
+  <button (click)="search()" mat-button>Search</button>
+</p>
 
-    <div>
-        <img src="../../../assets/angular.png" width="50">
-    </div>
-    <h1>Cryptos</h1>
-    <div>
-        <input type="text" placeholder="From">
-    </div>
-    <div>
-        <input type="text" placeholder="To">
-    </div>
-    <div>
-        <button (click)="search()">Search</button>
-        <button (click)="terms()">Terms...</button>
-    </div>
-    <div>
-        <ng-container #vc></ng-container>
-    </div>
-</div>
+<mat-card *ngIf="active" class="example-card">
+  <mat-card-header>
+    <div mat-card-avatar class="example-header-image"></div>
+    <mat-card-title>ng-dogecoin</mat-card-title>
+    <mat-card-subtitle>Meme Coin</mat-card-subtitle>
+  </mat-card-header>
+  <img mat-card-image src="https://material.angular.io/assets/img/examples/shiba2.jpg" alt="Photo of a Shiba Inu">
+  <mat-card-content>
+    <p>
+      Ready to take your investments <em>to the moon?</em> Look no further than this coin guaranteed to increase in value by 10,000% by the end of the week.
+    </p>
+  </mat-card-content>
+  <mat-card-actions>
+    <button (click)="reset()" mat-button>Purchase</button>
+    <button (click)="reset()" mat-button>Watch</button>
+  </mat-card-actions>
+</mat-card>
+

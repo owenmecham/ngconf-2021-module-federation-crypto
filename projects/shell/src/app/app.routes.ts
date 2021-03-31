@@ -11,10 +11,10 @@ export const APP_ROUTES: Routes = [
 
   // Your route here:
 
-  // {
-  //   path: 'cryptos',
-  //   loadChildren: () => import('mfe1/Module').then(m => m.CryptosModule)
-  // },
+  {
+    path: 'cryptos',
+    loadChildren: () => import('mfe1/Module').then((m) => m.CryptosModule),
+  },
 
   {
     path: '**',

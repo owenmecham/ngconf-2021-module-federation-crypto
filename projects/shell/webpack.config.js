@@ -18,16 +18,9 @@ module.exports = {
   plugins: [
     new ModuleFederationPlugin({
 
-      // For remotes (please adjust)
-      // name: "shell",
-      // filename: "remoteEntry.js",
-      // exposes: {
-      //     './Component': './projects/shell/src/app/app.component.ts',
-      // },
-
       // For hosts (please adjust)
       remotes: {
-        "mfe1": "mfe1@http://localhost:3000/remoteEntry.js",
+        // "mfe1": "mfe1@http://localhost:3000/remoteEntry.js",
 
       },
 
@@ -41,7 +34,6 @@ module.exports = {
         "@angular/material/card": { singleton: true, strictVersion: true },
         "@angular/material/button": { singleton: true, strictVersion: true },
         "@angular/material/sidenav": { singleton: true, strictVersion: true },
-        // "@angular/material/": { singleton: true, strictVersion: true },
 
         ...sharedMappings.getDescriptors()
       }

@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { WalletLibService } from 'wallet-lib';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +8,7 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'shell';
+  constructor(private walletService: WalletLibService) {
+    this.walletService.purchase(100);
+  }
 }

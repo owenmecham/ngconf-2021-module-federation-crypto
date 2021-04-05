@@ -17,9 +17,10 @@
   },
   "private": true,
   "resolutions": {
-    "webpack": "^5.0.0"
+    "webpack": "^5.18.0"
   },
   "dependencies": {
+    "@angular-architects/module-federation": "^1.2.3",
     "@angular/animations": "11.0.0",
     "@angular/cdk": "^11.2.5",
     "@angular/common": "11.0.0",

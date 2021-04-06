@@ -20,6 +20,9 @@
 <p>
   <button (click)="search()" mat-button>Search</button>
 </p>
+<h1>
+	      Available Balance: {{ balance | currency }}
+</h1>
 
 <mat-card *ngIf="active" class="example-card">
   <mat-card-header>
@@ -32,9 +35,10 @@
     <p>
       Ready to take your investments <em>to the moon?</em> Look no further than this coin guaranteed to increase in value by 10,000% by the end of the week.
     </p>
+
   </mat-card-content>
   <mat-card-actions>
-    <button (click)="reset()" mat-button>Purchase</button>
+    <button *ngIf='balance' (click)="reset()" mat-button>Purchase</button>
     <button (click)="reset()" mat-button>Watch</button>
   </mat-card-actions>
 </mat-card>

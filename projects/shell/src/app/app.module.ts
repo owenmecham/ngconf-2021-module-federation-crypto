@@ -11,6 +11,7 @@ import { AppComponent } from './app.component';
 import { APP_ROUTES } from './app.routes';
 import { HomeComponent } from './home/home.component';
 import { NotFoundComponent } from './not-found/not-found.component';
+import { PluginProxyComponent } from './plugins/plugin-proxy.component';
 
 @NgModule({
   imports: [
@@ -23,7 +24,7 @@ import { NotFoundComponent } from './not-found/not-found.component';
     MatButtonModule,
     MatIconModule,
   ],
-  declarations: [AppComponent, HomeComponent, NotFoundComponent],
+  declarations: [AppComponent, HomeComponent, NotFoundComponent, PluginProxyComponent],
   providers: [],
   bootstrap: [AppComponent],
 })

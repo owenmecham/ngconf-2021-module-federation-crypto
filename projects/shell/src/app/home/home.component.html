@@ -1,1 +1,11 @@
 <h1>Wallet Balance: {{ balance | currency}}</h1>
+<mat-selection-list #charts [multiple]="false">
+  <mat-list-option *ngFor="let p of plugins" [value]="p" (click)="handleClick(p)">
+    {{p.displayName}}
+  </mat-list-option>
+</mat-selection-list>
+
+<ng-container *ngFor="let p of graphs; let last = last">
+    <plugin-proxy [options]="p"></plugin-proxy>
+    <i *ngIf="!last" class="arrow right" style=""></i>
+</ng-container>

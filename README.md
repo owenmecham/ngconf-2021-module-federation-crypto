@@ -6,11 +6,8 @@ Due to limitations with npm, you must use yarn
 
 Look at package.json
 
-```"resolutions": {
-    "webpack": "5.0.0"
+````"resolutions": {
+    "webpack": "5.18.0"
 },```
 
-
-
-
-
+````

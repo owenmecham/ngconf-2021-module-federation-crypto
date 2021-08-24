@@ -23,7 +23,9 @@
               "projects/mfe1/src/favicon.ico",
               "projects/mfe1/src/assets"
             ],
-            "styles": [ "./node_modules/@angular/material/prebuilt-themes/purple-green.css"],
+            "styles": [
+              "./node_modules/@angular/material/prebuilt-themes/purple-green.css"
+            ],
             "scripts": []
           },
           "configurations": {
@@ -54,7 +56,10 @@
                 }
               ]
             }
-          }
+          },
+          "outputs": [
+            "{options.outputPath}"
+          ]
         },
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
@@ -89,7 +94,10 @@
               "projects/mfe1/src/styles.css"
             ],
             "scripts": []
-          }
+          },
+          "outputs": [
+            "coverage/projects/mfe1"
+          ]
         },
         "lint": {
           "builder": "@angular-devkit/build-angular:tslint",
@@ -138,7 +146,9 @@
               "projects/shell/src/favicon.ico",
               "projects/shell/src/assets"
             ],
-            "styles": [ "./node_modules/@angular/material/prebuilt-themes/purple-green.css"],
+            "styles": [
+              "./node_modules/@angular/material/prebuilt-themes/purple-green.css"
+            ],
             "scripts": []
           },
           "configurations": {
@@ -169,7 +179,10 @@
                 }
               ]
             }
-          }
+          },
+          "outputs": [
+            "{options.outputPath}"
+          ]
         },
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
@@ -199,9 +212,14 @@
               "projects/shell/src/favicon.ico",
               "projects/shell/src/assets"
             ],
-            "styles": [ "./node_modules/@angular/material/prebuilt-themes/purple-green.css"],
+            "styles": [
+              "./node_modules/@angular/material/prebuilt-themes/purple-green.css"
+            ],
             "scripts": []
-          }
+          },
+          "outputs": [
+            "coverage/projects/shell"
+          ]
         },
         "lint": {
           "builder": "@angular-devkit/build-angular:tslint",

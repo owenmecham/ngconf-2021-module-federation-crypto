@@ -13,4 +13,6 @@ export class CryptosSearchComponent {
   reset(): void {
     this.active = false;
   }
+
+  purchase(): void {}
 }
